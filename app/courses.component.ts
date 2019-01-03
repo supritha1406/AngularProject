@@ -54,4 +54,6 @@ export class CoursesComponent {
 // srting interpolation -->  <img src="{{imageUrl}}"/>   (Interpolation works well adding dynamic values between headings.)
 // OR square bracket syntax -->   <img [src]="title" />
 // property binding for square bracket syntax is -->  <h2 [textContent]="title"></h2>
+
+// ** Property binding works only one way. i.e from component to the dom. If there are any changes in the component, angular will update the dom. But if there are any changes made in the dom are not reflected back in the component.
     
