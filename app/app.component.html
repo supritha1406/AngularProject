@@ -1,63 +1,13 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!--div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class = "main">
+  <h1>Item's List</h1>
+  <div class = "addItem">
+    <input [(ngModel)] = "newItem" placeholder="Add Item" class="addText"> 
+     <button (click)="pushItem()">Add</button>
+  </div>
+  <ul>
+    <li *ngFor = " let i of items; let ind = index "> 
+       {{ i }}
+      <span (click)="removeItem(ind)">x</span>
+    </li>
+  </ul>
 </div>
-<h2>Here are some links to help you start: </h2>
-
-
-<router-outlet></router-outlet>
-
-<h1>Angular</h1>    
-<courses></courses-->
-
-  <!--div *ngIf="courses.length > 0">
-    List of courses
-  </div>
-  <div *ngIf="courses.length == 0">
-    No courses yet
-  </div-->
-
-  <!--div *ngIf = "course.length > 0; else noCourses">
-    List of courses
-  </div>
-
-  <ng-template #noCourses>
-    No courses yet
-  </ng-template-->
-
-  <!--div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
-  <ng-template #courseList>
-    List of courses
-  </ng-template>
-  <ng-template #noCourses>
-    No course yet
-  </ng-template-->
-
-  <!--ul class="nav nav-pills">
-      <li class="active"><a href="">MAp View</a></li>
-      <li><a href="">List View</a></li>
-  </ul>    
-  <div>
-    <div>Map View Content</div>
-  </div-->
-
-  <!--ul class="nav nav-pills">
-  <li [class.active]="viewMode ==  'map'"><a (click)="ViewMode= 'map'">Map View</a></li>
-  <li [class.active]="viewMode ==  'list'"><a (click)="">List View</a></li>
-</ul>    
-<div [ngSwitch]="viewMode">
-  <div *ngSwitchCase="'map'">Map View Content</div>
-  <div *ngSwitchCase="'list'">List View Content</div>
-  <div *ngSwitchDefault>Otherwise</div>
-</div-->
-
-<!--ul>
-  <li *ngFor="let course of courses; even as isEven">
-    {{ course.name }} <span *ngIf = "isEven">(EVEN)</span>
-  </li>
-</ul-->
-
-<contact-form></contact-form>

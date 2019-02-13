@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  courses = [];
+  items = ["HTML", "CSS", "JAVASCRIPT"]; 
+  newItem = "";
+   pushItem = function() {
+     if(this.newItem != "") {
+       this.items.push(this.newItem);
+       this.newItem = "";
+     }
+   }
+  removeItem = function(index) { // index is the position of list items. 
+    this.items.splice(index, 1); // 1 indicates to remove "1" item from the give "index"
+  }
 }
